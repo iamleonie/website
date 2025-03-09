@@ -1,6 +1,0 @@
----
-title: "Thank you"
----
-
-Thank you for subscribing to my newsletter.
-You have subscribed successfully.
