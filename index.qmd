@@ -1,0 +1,37 @@
+---
+title: "Hi, I'm Leonie"
+listing:
+  contents:
+  #- posts
+  - archived-items.yaml
+  #max-items: 5
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  feed: 
+    items: 10
+  fields: [title, subtitle, date, ] # image
+page-layout: full
+format:
+  html:
+    html-math-method: mathml
+#title-block-banner: true
+---
+
+a machine learning engineer and technical writer. \
+I help developers build AI applications using vector embeddings.\
+My writing focuses on machine learning and AI engineering.
+
+## This page is currently under construction. 
+
+While I build out this website, you can subscribe to my e-mail list to get notified when I publish my next blog post.
+
+```{=html}
+{{< include /_includes/subscribe.html >}}
+```
+
+## Towards Data Science Archive
+
+You can read all my previous [Medium](https://medium.com/@iamleonie) articles (without the paywall) here:

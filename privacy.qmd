@@ -1,0 +1,6 @@
+---
+title: "Privacy Policy"
+---
+
+<div class="itrk-legaltext" data-itrk-legaltext-url="https://itrk.legal/ZBT.99.TK8-iframe.html"></div>
+<script src="https://www.it-recht-kanzlei.de/js/itrk-legaltext.js"></script>

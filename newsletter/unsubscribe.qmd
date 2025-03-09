@@ -1,0 +1,21 @@
+---
+title: "Sorry to see you go"
+about:
+  template: jolla
+  links:
+    - text: Twitter/X
+      icon: twitter-x
+      href: https://x.com/helloiamleonie
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/804250ab/
+---
+
+You've been unsubscribed from my e-mail list.
+
+If you ever decide you want to receive e-mail notifications on my blog again, you can always subscribe again. 
+```{=html}
+{{< include /_includes/subscribe.html >}}
+```
+
+In the meantime, you can find me here:

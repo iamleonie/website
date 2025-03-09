@@ -1,0 +1,34 @@
+project:
+  type: website
+
+website:
+  title: "Leonie Monigatti"
+  description: "Leonie Monigatti's portfolio and blog about Machine Learning and AI Engineering."
+  site-url: https://www.leoniemonigatti.com
+  back-to-top-navigation: true
+  page-navigation: true
+  navbar: 
+    search: false
+  page-footer:
+    left:
+    - Hi, I am Leonie,a machine learning engineer and technical writer. I help developers build AI applications using vector embeddings. My writing focuses on machine learning and AI engineering.
+    center:
+      - "Copyright 2025, Leonie Monigatti" 
+      - imprint.qmd
+      - privacy.qmd
+    right: 
+    - icon: twitter-x
+      href: https://x.com/helloiamleonie
+    - icon: linkedin
+      href: https://www.linkedin.com/in/804250ab/
+    - icon: rss
+      href: index.xml
+format:
+  html:
+    theme:
+      - cosmo
+      - styles/custom.scss
+    css: styles/styles.css
+
+
+

@@ -1,0 +1,112 @@
+// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+// https://quarto.org/docs/output-formats/html-themes.html#theme-options
+/*-- scss:defaults --*/
+
+// Base document colors
+$black: #262620;
+$white: #f7f6f1;
+$primary: tomato;
+$secondary: #ffce1e;
+$tertiary: #08f93d;
+
+
+$body-bg: $white;
+$body-color: $black;
+$link-color: $primary ;
+
+//$font-family-sans-serif: If you want to customize typography.
+$code-block-bg: $black;
+//$code-bg: $black;
+//$code-color
+
+$navbar-bg: $white;
+$navbar-light-active-color: $black;
+
+$font-family-sans-serif: "Helvetica Neue", "Arial", sans-serif;
+
+/*-- scss:rules --*/
+nav .nav-item {
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  text-decoration: underline;
+}
+
+.quarto-title-banner h1, .quarto-title-banner .h1, .quarto-title-banner h2, .quarto-title-banner .h2 {
+  color: $black;
+}
+
+h1, .h1{
+  font-size: 30px;
+}
+
+h2, .h2 {
+  border-bottom: none;
+  font-size: 20px;
+}
+
+h3, .h3 {
+  border-bottom: none;
+  font-size: 18px;
+}
+
+body {
+  font-size: 14px;
+}
+
+div.quarto-post .metadata {
+  flex-basis: 10%;
+}
+
+div.sourceCode {
+  border-radius: 5px;
+}
+
+pre > code.sourceCode > span {
+  color: $white;
+}
+
+code span {
+  color: #e4c1f9;
+}
+
+code span.im {
+  color: #a9def9;
+}
+
+code span.kw {
+  color: #d0f4de;
+}
+
+code span.cf {
+  color: #fcf6bd;
+}
+
+code span.va {
+  color: #ff99c8;
+}
+
+code span.st {
+  color: #f2b5d4;
+}
+
+code span.fl {
+  color: #f7d6e0;
+}
+
+code span.dv {
+  color: plum;
+}
+
+code span.op {
+  color: #b2f7ef;
+}
+
+code span.sc {
+  color: #7bdff2;
+}
+
+code span.co {
+  color: lightgrey;
+}

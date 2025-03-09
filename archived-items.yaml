@@ -1,0 +1,374 @@
+- title: "2024 in Review: What I Got Right, Where I Was Wrong, and Bolder Predictions for 2025"
+  subtitle: "What I got right (and wrong) about trends in 2024 and daring to make bolder predictions for the year ahead"
+  path: "https://medium.com/towards-data-science/2024-in-review-what-i-got-right-where-i-was-wrong-and-bolder-predictions-for-2025-4092c2d726cd"
+  date: "2024-12-17"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "The Challenges of Retrieving and Evaluating Relevant Context for RAG"
+  subtitle: "A case study with a grade 1 text understanding exercise for how to measure context relevance in your retrieval-augmented generation system using Ragas, TruLens, and DeepEval"
+  path: "https://medium.com/towards-data-science/the-challenges-of-retrieving-and-evaluating-relevant-context-for-rag-e362f6eaed34?sk=06f431e07d5e59d9b92daba865fac5d5"
+  date: "2024-06-10"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Shifting Tides: The Competitive Edge of Open Source LLMs over Closed Source LLMs"
+  subtitle: "Why I think smaller open source foundation models have already begun replacing proprietary models by providers, such as OpenAI, in Generative AI applications"
+  path: "https://medium.com/towards-data-science/shifting-tides-the-competitive-edge-of-open-source-llms-over-closed-source-llms-aee76018b5c7?sk=fe11a81f500967576ccd9cfb9ad65b2b"
+  date: "2024-04-29"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Intro to DSPy: Goodbye Prompting, Hello Programming!"
+  subtitle: "How the DSPy framework solves the fragility problem in LLM-based applications by replacing prompting with programming and compiling"
+  path: "https://medium.com/towards-data-science/intro-to-dspy-goodbye-prompting-hello-programming-4ca1c6ce3eb9?sk=9c65441028a96a8f7e8eac9ed6ba4347"
+  date: "2024-02-27"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Advanced Retrieval-Augmented Generation: From Theory to LlamaIndex Implementation"
+  subtitle: "How to address limitations of naive RAG pipelines by implementing targeted advanced RAG techniques in Python"
+  path: "https://medium.com/towards-data-science/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930"
+  date: "2024-02-19"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "2023 in Review: Recapping the Post-ChatGPT Era and What to Expect for 2024"
+  subtitle: "How the LLMOps landscape has evolved and why we haven’t seen many Generative AI applications in the wild yet — but maybe in 2024."
+  path: "https://medium.com/towards-data-science/2023-in-review-recapping-the-post-chatgpt-era-and-what-to-expect-for-2024-bb4357a4e827?sk=0a494f87bd0b0344594fa1e6694773a6"
+  date: "2023-12-18"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Evaluating RAG Applications with RAGAs"
+  subtitle: "A framework with metrics and LLM-generated data to evaluate the performance of your Retrieval-Augmented Generation pipeline"
+  path: "https://medium.com/towards-data-science/evaluating-rag-applications-with-ragas-81d67b0ee31a"
+  date: "2023-12-1s3"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "A Guide on 12 Tuning Strategies for Production-Ready RAG Applications"
+  subtitle: "How to improve the performance of your Retrieval-Augmented Generation (RAG) pipeline with these “hyperparameters” and tuning strategies"
+  path: "https://medium.com/towards-data-science/a-guide-on-12-tuning-strategies-for-production-ready-rag-applications-7ca646833439"
+  date: "2023-12-06"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Improving Retrieval Performance in RAG Pipelines with Hybrid Search"
+  subtitle: "How to find more relevant search results by combining traditional keyword-based search with modern vector search"
+  path: "https://medium.com/towards-data-science/improving-retrieval-performance-in-rag-pipelines-with-hybrid-search-c75203c2f2f5"
+  date: "2023-11-28"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Recreating Amazon’s New Generative AI Feature: Product Review Summaries"
+  subtitle: "How to generate summaries from data in your Weaviate vector database with an OpenAI LLM in Python using a concept called “Generative Feedback Loops”"
+  path: "https://medium.com/@iamleonie/recreating-amazons-new-generative-ai-feature-product-review-summaries-50640e40872a"
+  date: "2023-11-21"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Retrieval-Augmented Generation (RAG): From Theory to LangChain Implementation"
+  subtitle: "From the theory of the original academic paper to its Python implementation with OpenAI, Weaviate, and LangChain"
+  path: "https://medium.com/towards-data-science/retrieval-augmented-generation-rag-from-theory-to-langchain-implementation-4e9bd5f6a4f2"
+  date: "2023-11-14"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Recreating Andrej Karpathy’s Weekend Project — a Movie Search Engine"
+  subtitle: "Building a movie recommender system with OpenAI embeddings and a vector database"
+  path: "https://medium.com/towards-data-science/recreating-andrej-karpathys-weekend-project-a-movie-search-engine-9b270d7a92e4"
+  date: "2023-11-07"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Why OpenAI’s API Is More Expensive for Non-English Languages"
+  subtitle: "Beyond words: How byte pair encoding and Unicode encoding factor into pricing disparities"
+  path: "https://medium.com/towards-data-science/why-openais-api-is-more-expensive-for-non-english-languages-553da4a1eecc?sk=af397069bfbfd9b036ffe4191a4a947e"
+  date: "2023-08-16"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Easily Estimate Your OpenAI API Costs with Tiktoken"
+  subtitle: "Count your tokens and avoid going bankrupt from using the OpenAI API"
+  path: "https://medium.com/towards-data-science/easily-estimate-your-openai-api-costs-with-tiktoken-c17caf6d015e?sk=320e162f6f5991d0574aea52706676b9"
+  date: "2023-08-01"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Getting Started with Weaviate: A Beginner’s Guide to Search with Vector Databases"
+  subtitle: "How to use vector databases for semantic search, question answering, and generative search in Python with OpenAI and Weaviate"
+  path: "https://medium.com/towards-data-science/getting-started-with-weaviate-a-beginners-guide-to-search-with-vector-databases-14bbb9285839"
+  date: "2023-07-18"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Explaining Vector Databases in 3 Levels of Difficulty"
+  subtitle: "From noob to expert: Demystifying vector databases across different backgrounds"
+  path: "https://medium.com/towards-data-science/explaining-vector-databases-in-3-levels-of-difficulty-fc392e48ab78?sk=6453eeaebddb3587ed1f78ecc0dc474a"
+  date: "2023-07-04"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Matplotlib Tips to Instantly Improve Your Data Visualizations — According to “Storytelling with Data”"
+  subtitle: "Recreating lessons learned from Cole Nussbaumer Knaflic’s book in Python using Matplotlib"
+  path: "https://medium.com/towards-data-science/matplotlib-tips-to-instantly-improve-your-data-visualizations-according-to-storytelling-with-8e75601b38cb?sk=e7cdaaae7d200055bbd98f3d976147d9"
+  date: "2023-06-20"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Boosting PyTorch Inference on CPU: From Post-Training Quantization to Multithreading"
+  subtitle: "How to reduce inference time on CPU with clever model selection, post-training quantization with ONNX Runtime or OpenVINO, and multithreading with ThreadPoolExecutor"
+  path: "https://medium.com/towards-data-science/boosting-pytorch-inference-on-cpu-from-post-training-quantization-to-multithreading-6820ac7349bb?sk=557505b4e710d68e1d61948755eb7635"
+  date: "2023-06-13"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "10 Exciting Project Ideas Using Large Language Models (LLMs) for Your Portfolio"
+  subtitle: "Learn how to build apps and showcase your skills with large language models (LLMs). Get started today!"
+  path: "https://medium.com/towards-data-science/10-exciting-project-ideas-using-large-language-models-llms-for-your-portfolio-970b7ab4cf9e?sk=9b8d2cd00dda823777a3cee55e7cffa6"
+  date: "2023-05-15"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "PyTorch Image Classification Tutorial for Beginners"
+  subtitle: "Fine-tuning pre-trained Deep Learning models in Python"
+  path: "https://medium.com/towards-data-science/pytorch-image-classification-tutorial-for-beginners-94ea13f56f2?sk=4603a60d54cf546082f4e875dbffb5d4"
+  date: "2023-05-09"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Getting Started with LangChain: A Beginner’s Guide to Building LLM-Powered Applications"
+  subtitle: "A LangChain tutorial to build anything with large language models in Python"
+  path: "https://medium.com/towards-data-science/getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications-95fc8898732c?sk=84525039dbb89d32ae99cffe517ca8db"
+  date: "2023-04-25"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Cutout, Mixup, and Cutmix: Implementing Modern Image Augmentations in PyTorch"
+  subtitle: "Data augmentation techniques for Computer Vision implemented in Python"
+  path: "https://medium.com/towards-data-science/cutout-mixup-and-cutmix-implementing-modern-image-augmentations-in-pytorch-a9d7db3074ad?sk=92c808cb3a18f345ad9bfd1c7628c522"
+  date: "2023-04-14"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Stationarity in Time Series — A Comprehensive Guide"
+  subtitle: "How to check if a time series is stationary and what you can do if it is non-stationary in Python"
+  path: "https://medium.com/towards-data-science/stationarity-in-time-series-a-comprehensive-guide-8beabe20d68?sk=bec722b1b7e0888f5eb782abf25c7965"
+  date: "2023-04-11"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "How to Save and Load Your Neural Networks in Python"
+  subtitle: "A complete guide to saving and loading checkpoints and entire Deep Learning models in PyTorch and TensorFlow/Keras"
+  path: "https://medium.com/towards-data-science/how-to-save-and-load-your-neural-networks-in-python-cb2063c4a7bd?sk=a922392954b177286fe7f39d9928242e"
+  date: "2023-04-05"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "Audio Classification with Deep Learning in Python"
+  subtitle: "Fine-tuning image models to tackle domain shift and class imbalance with PyTorch and torchaudio in audio data"
+  path: "https://medium.com/towards-data-science/audio-classification-with-deep-learning-in-python-cf752b22ba07?sk=4785fb989181118376477edf40ce6df6"
+  date: "2023-04-04"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Data Augmentation Techniques for Audio Data in Python"
+  subtitle: "How to augment audio in waveform (time domain) and as spectrograms (frequency domain) with librosa, numpy, and PyTorch"
+  path: "https://medium.com/towards-data-science/data-augmentation-techniques-for-audio-data-in-python-15505483c63c?sk=e26c157039e6fb039f52f3e536aa1d4c"
+  date: "2023-03-28"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "2 Simple Steps To Reduce the Memory Usage of Your Pandas Dataframe"
+  subtitle: "How to fit a large dataset into your RAM in Python"
+  path: "https://medium.com/towards-data-science/2-simple-steps-to-reduce-the-memory-usage-of-your-pandas-dataframe-b654565d654?sk=9afbe9d52cd3ff267ca3f698a96be6ac"
+  date: "2023-03-21"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "A Simple Approach to Hierarchical Time Series Forecasting with Machine Learning"
+  subtitle: "How to “boost” your cyclical sales data forecast with LightGBM and Python"
+  path: "https://medium.com/towards-data-science/a-simple-approach-to-hierarchical-time-series-forecasting-with-machine-learning-2e180d83966c?sk=d14712eaa29dee4015a33150a19bff2b"
+  date: "2023-03-14"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Beginner’s Guide to the Must-Know LightGBM Hyperparameters"
+  subtitle: "The most important LightGBM parameters, what they do, and how to tune them"
+  path: "https://medium.com/towards-data-science/beginners-guide-to-the-must-know-lightgbm-hyperparameters-a0005a812702?sk=bc3c477e5d54887ec49439dffb8fb8c8"
+  date: "2023-03-07"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Building a Recommender System using Machine Learning"
+  subtitle: "“Candidate rerank” approach with co-visitation matrix and GBDT ranker model in Python"
+  path: "https://medium.com/towards-data-science/building-a-recommender-system-using-machine-learning-2eefba9a692e?sk=d1e35d7c764c4760671d6d781f8ab099"
+  date: "2023-03-01"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Intermediate Deep Learning with Transfer Learning"
+  subtitle: "A practical guide for fine-tuning Deep Learning models for computer vision and natural language processing"
+  path: "https://medium.com/towards-data-science/intermediate-deep-learning-with-transfer-learning-f1aba5a814f?sk=927e74b1308ad50e582e9db9682e8565"
+  date: "2023-02-22"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Pandas vs. Polars: A Syntax and Speed Comparison"
+  subtitle: "Understanding the major differences between the Python libraries Pandas and Polars for Data Science"
+  path: "https://medium.com/towards-data-science/pandas-vs-polars-a-syntax-and-speed-comparison-5aa54e27497e?sk=a33400c0e6292718ea3a0544c1eeed22"
+  date: "2023-01-11"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Will We Be Using ChatGPT Instead of Google To Get a Christmas Cookie Recipe Next Year?"
+  subtitle: "Will ChatGPT replace search engines? A walkthrough with the use case of looking up a sugar cookie recipe"
+  path: "https://medium.com/geekculture/will-we-be-using-chatgpt-instead-of-google-to-get-a-christmas-cookie-recipe-next-year-45360d4a1178?sk=05f36fb22ee1ba032572a98c80c66f09"
+  date: "2022-12-22"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "A Visual Guide to Learning Rate Schedulers in PyTorch"
+  subtitle: "LR decay and annealing strategies for Deep Learning in Python"
+  path: "https://medium.com/towards-data-science/a-visual-guide-to-learning-rate-schedulers-in-pytorch-24bbb262c863?sk=4288c6886caea771222af8ed65de7b73"
+  date: "2022-12-06"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Kaggle Days Paris 2022"
+  subtitle: "Discussing Data Science with Kagglers while eating macarons"
+  path: "https://medium.com/@iamleonie/kaggle-days-paris-2022-a29bc4428bb2?sk=5e9f2d77b5dc14f5a01b47abaee2faa1"
+  date: "2022-11-22"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "How to Create a PDF Report for Your Data Analysis in Python"
+  subtitle: "Automate PDF generation with the FPDF library as part of your data analysis"
+  path: "https://medium.com/towards-data-science/how-to-create-a-pdf-report-for-your-data-analysis-in-python-2bea81133b?sk=9c4fc965254e0e8d920b5ceb38ba0e1c"
+  date: "2022-10-25"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "How to Create a GIF from Matplotlib Plots in Python"
+  subtitle: "A data visualization technique for 2-dimensional time series data using imageio"
+  path: "https://medium.com/towards-data-science/how-to-create-a-gif-from-matplotlib-plots-in-python-6bec6c0c952c?sk=1bb4664c67d21ea5d636c24f7ef795fa"
+  date: "2022-10-18"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "A Collection of Must-Know Techniques for Working with Time Series Data in Python"
+  subtitle: "How to manipulate and visualize time series data in datetime format with ease"
+  path: "https://medium.com/towards-data-science/a-collection-of-must-know-techniques-for-working-with-time-series-data-in-python-7c01d199b184?sk=cbe99dbe22e92513c115b03d086c6776"
+  date: "2022-10-12"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+  
+- title: "How to Easily Customize SHAP Plots in Python"
+  subtitle: "Adjust the colors and figure size and add titles and labels to SHAP plots"
+  path: "https://medium.com/towards-data-science/how-to-easily-customize-shap-plots-in-python-fdff9c0483f2?sk=efe280e6720c5141f11b06eed374b1ff"
+  date: "2022-10-04"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Everything You Need to Know About the Binary Search Algorithm"
+  subtitle: "Master the Binary Search algorithm in 8 minutes"
+  path: "https://medium.com/towards-data-science/everything-you-need-to-know-about-the-binary-search-algorithm-6bc4f9a3127d?sk=246a45979b14429599b6a1978c41f941"
+  date: "2022-09-27"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "A Beginner’s Guide to Prompt Design for Text-to-Image Generative Models"
+  subtitle: "Learn these prompt engineering tricks before you waste your free trial credits"
+  path: "https://medium.com/towards-data-science/a-beginners-guide-to-prompt-design-for-text-to-image-generative-models-8242e1361580?sk=ceb56e06f75868a89cbc67b8ffb594ac"
+  date: "2022-09-20"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Intermediate Data Analysis Techniques for Text Data"
+  subtitle: "How to perform Exploratory Data Analysis on text data for Natural Language Processing"
+  path: "https://medium.com/towards-data-science/intermediate-eda-techniques-for-nlp-2c898cc96d1d?sk=521d6f7683a4f2bceb0b207d691657bb"
+  date: "2022-09-13"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "AI-Generated Art: How to Get Started with Generating Your Own Images"
+  subtitle: "A non-technical comparison of DALL·E2, Midjourney, and Stable Diffusion"
+  path: "https://medium.com/towards-data-science/ai-generated-art-how-to-get-started-with-generating-your-own-images-821bc130fef4?sk=53ace25e5029e39e53625152c0ba2043"
+  date: "2022-09-07"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Fundamental Data Analysis Techniques for Text Data"
+  subtitle: "EDA for NLP: From counts, lengths, and term frequencies to why you don’t need word clouds"
+  path: "https://medium.com/towards-data-science/fundamental-eda-techniques-for-nlp-f81a93696a75?sk=a73c751fada22c7a6bf8e18022d2d144"
+  date: "2022-08-31"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Time Series Problems Simply Explained as Fast Food Combo Meals"
+  subtitle: "The difference between univariate vs. multivariate, single-step vs. multistep, and sliding vs. expanding window time series problems"
+  path: "https://medium.com/towards-data-science/time-series-problems-simply-explained-as-fast-food-combo-meals-70c6eb9bdef?sk=c779c9d2dc2dbe7e9cbe9673c2cdb1d0"
+  date: "2022-08-23"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "99 Lessons on Data Analysis from Placing Top 5 in 5 Kaggle Analytics Challenges"
+  subtitle: "(Grand)Masterclass: How to approach (and win) a Kaggle Analytics Competition"
+  path: "https://medium.com/towards-data-science/99-lessons-on-data-analysis-from-placing-top-5-in-5-kaggle-analytics-challenges-453d5e7b4581?sk=3f14995771a1706aba7bdd2d6923c565"
+  date: "2022-08-16"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Visualizing Part-of-Speech Tags with NLTK and SpaCy"
+  subtitle: "Customizing displaCy’s entity visualizer"
+  path: "https://medium.com/towards-data-science/visualizing-part-of-speech-tags-with-nltk-and-spacy-42056fcd777e?sk=e0ee1b95afc042dffab5efa43d027246"
+  date: "2022-08-09"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Interpreting ACF and PACF Plots for Time Series Forecasting"
+  subtitle: "How to determine the order of AR and MA models"
+  path: "https://medium.com/towards-data-science/interpreting-acf-and-pacf-plots-for-time-series-forecasting-af0d6db4061c?sk=a7bff54136a8756a083f95b1cb10b0e7"
+  date: "2022-08-02"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "How to Handle Large Datasets in Python"
+  subtitle: "A Comparison of CSV, Pickle, Parquet, Feather, and HDF5"
+  path: "https://medium.com/towards-data-science/how-to-handle-large-datasets-in-python-1f077a7e7ecf?sk=3a9defd1d4c606136dc7b8f2738c1dcf"
+  date: "2022-07-26"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "How to Merge Pandas DataFrames"
+  subtitle: "How to Avoid Losing Valuable Data Points (incl. Cheat Sheet)"
+  path: "https://medium.com/towards-data-science/how-to-merge-pandas-dataframes-35afe8b1497c?sk=a2af2a6d342c2d3186a0a6edd360b211"
+  date: "2022-07-20"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Why Your Data Visualizations Should Be Colorblind-Friendly"
+  subtitle: "Especially if You Are Trying to Convince Men"
+  path: "https://medium.com/towards-data-science/is-your-color-palette-stopping-you-from-reaching-your-goals-bf3b32d2ac49?sk=39a6d8f494f579e91c47f4896b18de6a"
+  date: "2022-07-12"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "5 Ideas to Create New Features from Polygons"
+  subtitle: "How to Get the Area and Other Features From a WKT String with Shapely"
+  path: "https://medium.com/towards-data-science/5-ideas-to-create-new-features-from-polygons-f8f902f5ad8f?sk=b723e12a28c093bd09120c98a19415a4"
+  date: "2022-07-06"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+- title: "Essential Techniques to Style Pandas DataFrames"
+  subtitle: "How to Effectively Communicate Data with Tables (including Cheat Sheet)"
+  path: "https://medium.com/towards-data-science/essential-techniques-to-style-pandas-dataframes-8796c74c9ff3?sk=f5e998f4bf475d97161e38672c8f7ce2"
+  date: "2022-06-27"
+  categories: [Archive, Towards Data Science]
+  description: "..."
+
+
+
+
