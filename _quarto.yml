@@ -5,6 +5,9 @@ website:
   title: "Leonie Monigatti"
   description: "Leonie Monigatti's portfolio and blog about Machine Learning and AI Engineering."
   site-url: https://www.leoniemonigatti.com
+  cookie-consent:
+    type: express
+    prefs-text: "Cookie Consent"
   back-to-top-navigation: true
   page-navigation: true
   navbar: 
