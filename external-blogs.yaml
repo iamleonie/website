@@ -1,0 +1,179 @@
+- title: "An Overview of Late Interaction Retrieval Models: ColBERT, ColPali, and ColQwen"
+  subtitle: ""
+  path: "https://weaviate.io/blog/late-interaction-overview"
+  author: Leonie Monigatti, Victoria Slocum, Danny Williams
+  date: "2025-04-09"
+  categories: [Weaviate Blog]
+  client: "Weaviate"
+  description: "..."
+
+- title: "What Are Agentic Workflows? Patterns, Use Cases, Examples, and More"
+  subtitle: ""
+  path: "https://weaviate.io/blog/what-are-agentic-workflows"
+  author: Mary Newhauser, Leonie Monigatti, Prajjwal Yadav, Tuana Celik
+  date: "2025-03-06"
+  categories: [Weaviate Blog]
+  client: "Weaviate"
+  description: "..."
+
+- title: "ハイブリッド検索とは？"
+  subtitle: ""
+  path: "https://weaviate.io/blog/hybrid-search-ja"
+  author: Leonie Monigatti
+  date: "2024-12-11"
+  categories: [Weaviate Blog]
+  client: "Weaviate"
+  description: "..."
+
+- title: "What is Agentic RAG"
+  subtitle: ""
+  path: "https://weaviate.io/blog/what-is-agentic-rag"
+  author:  Erika Cardenas, Leonie Monigatti
+  date: "2024-11-05"
+  categories: [Weaviate Blog]
+  description: "..."
+
+- title: "OpenAI's Matryoshka Embeddings in Weaviate"
+  subtitle: ""
+  path: "https://weaviate.io/blog/openais-matryoshka-embeddings-in-weaviate"
+  author: Leonie Monigatti, Zain Hasan
+  date: "2024-06-18"
+  categories: [Weaviate Blog]
+  description: "..."
+
+- title: "Step-by-Step Guide to Choosing the Best Embedding Model for Your Application"
+  subtitle: ""
+  path: "https://weaviate.io/blog/how-to-choose-an-embedding-model"
+  author: Leonie Monigatti, Zain Hasan, JP Hwang
+  date: "2024-06-04"
+  categories: [Weaviate Blog]
+  description: "..."
+
+- title: "Evaluation Metrics for Search and Recommendation Systems"
+  subtitle: ""
+  path: "https://weaviate.io/blog/retrieval-evaluation-metrics"
+  author: Leonie Monigatti
+  date: "2024-05-28"
+  categories: [Weaviate Blog]
+  description: "..."
+
+- title: "Building a Local RAG System for Privacy Preservation with Ollama and Weaviate"
+  subtitle: ""
+  path: "https://weaviate.io/blog/local-rag-with-ollama-and-weaviate"
+  author: Leonie Monigatti
+  date: "2024-05-21"
+  categories: [Weaviate Blog]
+  description: "..."
+
+- title: "Using Weaviate with Non-English Languages"
+  subtitle: ""
+  path: "https://weaviate.io/blog/weaviate-non-english-languages"
+  author: Leonie Monigatti
+  date: "2024-01-30"
+  categories: [Weaviate Blog]
+  description: "..."
+
+- title: "A Gentle Introduction to Vector Databases"
+  subtitle: ""
+  path: ""
+  author: Leonie Monigatti, Zain Hasan
+  date: "2024-08-01"
+  categories: [Weaviate Blog]
+  description: "..."
+
+- title: "Build enterprise-ready generative AI solutions with Cohere foundation models in Amazon Bedrock and Weaviate vector database on AWS Marketplace"
+  subtitle: ""
+  author:  James Yi, Leonie Monigatti, Meor Amer, and Shun Mao
+  path: "https://aws.amazon.com/blogs/machine-learning/build-enterprise-ready-generative-ai-solutions-with-cohere-foundation-models-in-amazon-bedrock-and-weaviate-vector-database-on-aws-marketplace/"
+  date: "2024-01-24"
+  categories: [AWS Machine Learning Blog]
+  description: "..."
+
+- title: "From prototype to production: Vector databases in generative AI applications"
+  subtitle: "What exactly is a vector database? And how does it relate to generative AI?"
+  path: "https://stackoverflow.blog/2023/10/09/from-prototype-to-production-vector-databases-in-generative-ai-applications/"
+  date: "2023-09-23"
+  categories: [Stackoverflow Blog]
+  description: "..."
+
+- title: "How to Get Started with the Weaviate Vector Database on Docker"
+  subtitle: ""
+  path: "https://www.docker.com/blog/how-to-get-started-weaviate-vector-database-on-docker/"
+  date: "2023-09-19"
+  categories: [Docker Blog]
+  description: "..."
+
+- title: "What Is MLOps? Machine Learning Operations Explained"
+  subtitle: ""
+  path: "https://wandb.ai/site/articles/what-is-mlops/"
+  date: "2024-01-11"
+  categories: [Weights & Biases Blog]
+  description: "..."
+
+
+- title: "Understanding LLMOps: Large Language Model Operations"
+  subtitle: ""
+  path: "https://wandb.ai/site/articles/understanding-llmops-large-language-model-operations/"
+  date: "2023-04-16"
+  categories: [Weights & Biases Blog]
+  description: "..."
+
+
+- title: "Intro to MLOps: Data and Model Versioning"
+  subtitle: ""
+  path: "https://wandb.ai/site/articles/intro-to-mlops-data-and-model-versioning/"
+  date: "2023-01-17"
+  categories: [Weights & Biases Blog]
+  description: "..."
+
+
+- title: "Intro to MLOps: Hyperparameter Tuning"
+  subtitle: ""
+  path: "https://wandb.ai/site/articles/intro-to-mlops-hyperparameter-tuning/"
+  date: "2022-12-20"
+  categories: [Weights & Biases Blog]
+  description: "..."
+
+
+- title: "Intro to MLOps: Machine Learning Experiment Tracking"
+  subtitle: ""
+  path: "https://wandb.ai/site/articles/intro-to-mlops-machine-learning-experiment-tracking"
+  date: "2022-11-22"
+  categories: [Weights & Biases Blog]
+  description: "..."
+
+- title: "A gentle introduction to time series analysis & forecasting"
+  subtitle: "Fundamental concepts around time series analysis and time series forecasting, including everything from classical approaches to modern machine learning models with examples in Python"
+  path: ""
+  date: "2022-09-25"
+  categories: [Weights & Biases Blog]
+  description: "..."
+
+
+- title: "Warum Expertensysteme nicht als Teilgebiet von Künstlicher Intelligenz wahrgenommen werden"
+  subtitle: ""
+  path: "https://innovationlab.dzbank.de/2017/10/18/warum-expertensysteme-nicht-als-teilgebiet-von-kuenstlicher-intelligenz-wahrgenommen-werden/"
+  date: "2017-10-18"
+  categories: [DZ Bank Innovation Blog]
+  description: "..."
+
+- title: "Innovationstag 2017: die Genossenschaftliche FinanzGruppe im Aufbruch"
+  subtitle: ""
+  path: "https://innovationlab.dzbank.de/2017/10/11/innovationstag-2017-die-genossenschaftliche-finanzgruppe-im-aufbruch/"
+  date: "2017-10-11"
+  categories: [DZ Bank Innovation Blog]
+  description: "..."
+
+- title: "Trendscouts nehmen Machine Learning unter die Lupe: Kundensegmentierung (Teil 2)"
+  subtitle: ""
+  path: "https://innovationlab.dzbank.de/2017/08/23/trendscouts-nehmen-machine-learning-unter-die-lupe-kundensegmentierung-teil-2/"
+  date: "2017-08-23"
+  categories: [DZ Bank Innovation Blog]
+  description: "..."
+
+- title: "Trendscouts nehmen Machine Learning unter die Lupe: Kundensegmentierung (Teil 1)"
+  subtitle: ""
+  path: "https://innovationlab.dzbank.de/2017/08/21/trendscouts-nehmen-machine-learning-unter-die-lupe-kundensegmentierung-teil-1/"
+  date: "2017-08-21"
+  categories: [DZ Bank Innovation Blog]
+  description: "..."

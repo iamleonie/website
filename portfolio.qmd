@@ -1,0 +1,24 @@
+---
+title: "Portfolio"
+#description: "TODO"
+listing:
+  contents: external-blogs.yaml
+  exclude:
+    categories: "DZ*"
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  feed: true
+  fields: [title, date, categories]
+page-layout: full
+#title-block-banner: false
+---
+
+My technical writing has been published in a variety of technical publications:
+
+<!--
+## Social Media Promotion
+I don't offer paid collaboration to promote products via my social media channels.
+-->

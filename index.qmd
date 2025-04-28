@@ -1,18 +1,5 @@
 ---
 title: "Hi, I'm Leonie"
-listing:
-  contents:
-  #- posts
-  - archived-items.yaml
-  #max-items: 5
-  sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  feed: 
-    items: 10
-  fields: [title, subtitle, date, ] # image
 page-layout: full
 format:
   html:
@@ -21,11 +8,7 @@ format:
 ---
 
 a machine learning engineer and technical writer. \
-I help developers build AI applications using vector embeddings.\
+I help developers build vector-based AI solutions.\
 My writing focuses on machine learning and AI engineering.
 
-## Towards Data Science Archive
-
-This page is currently under construction. 
-
-You can read all my previous [Medium](https://medium.com/@iamleonie) articles (without the paywall) here:
+You can start reading [my personal blog posts](blog.qmd) or [my portfolio of client work](portfolio.qmd).

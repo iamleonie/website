@@ -1,0 +1,25 @@
+---
+title: "Blog"
+listing:
+  contents:
+  #- posts
+  - archived-items.yaml
+  #max-items: 5
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  feed: 
+    items: 10
+  fields: [title, subtitle, date, ] # image
+page-layout: full
+format:
+  html:
+    html-math-method: mathml
+#title-block-banner: true
+---
+
+This page is currently under construction. 
+
+You can read all my previous [Medium](https://medium.com/@iamleonie) articles (without the paywall) here:

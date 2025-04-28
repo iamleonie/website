@@ -10,8 +10,11 @@ website:
     prefs-text: "Cookie Consent"
   back-to-top-navigation: true
   page-navigation: true
-  navbar: 
+  navbar:     
     search: false
+    right:
+      - blog.qmd
+      - portfolio.qmd
   page-footer:
     left:
     - Hi, I am Leonie,a machine learning engineer and technical writer. I help developers build AI applications using vector embeddings. My writing focuses on machine learning and AI engineering.
