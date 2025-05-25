@@ -4,7 +4,6 @@ page-layout: full
 format:
   html:
     html-math-method: mathml
-#title-block-banner: true
 ---
 
 a machine learning engineer and technical writer. \
@@ -12,3 +11,268 @@ I help developers build vector-based AI solutions.\
 My writing focuses on machine learning and AI engineering.
 
 You can start reading [my personal blog posts](blog.qmd) or [my portfolio of client work](portfolio.qmd).
+
+```{=html}
+<div id="vector-galaxy-container" style="width: 100%; height: 400px; border-radius: 8px;"></div>
+
+<script src="/js/three.min.js"></script>
+<script>
+console.log("Starting Vector Galaxy visualization...");
+
+const container = document.getElementById('vector-galaxy-container');
+if (!container || typeof THREE === 'undefined') {
+  console.error("Container or THREE not available");
+} else {
+  const width = container.clientWidth || 800;
+  const height = 400;
+
+  // Scene setup
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ 
+    antialias: true,
+    alpha: true,
+    powerPreference: "high-performance"
+  });
+  
+  // High-DPI display support
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(dpr);
+  renderer.setSize(width, height);
+  renderer.setClearColor(0xf7f6f2);
+  
+  // Improve rendering quality
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.0;
+  
+  container.appendChild(renderer.domElement);
+
+  // Subtle lighting for galactic feel
+  const ambientLight = new THREE.AmbientLight(0xf7f6f2, 0.4);
+  const directionalLight = new THREE.DirectionalLight(0xf7f6f2, 0.3);
+  directionalLight.position.set(20, 20, 10);
+  const pointLight1 = new THREE.PointLight(0x262620, 0.2, 100);
+  pointLight1.position.set(-30, 15, -20);
+  const pointLight2 = new THREE.PointLight(0x444440, 0.1, 80);
+  pointLight2.position.set(25, -10, 30);
+  
+  scene.add(ambientLight);
+  scene.add(directionalLight);
+  scene.add(pointLight1);
+  scene.add(pointLight2);
+
+  // Position camera for galactic overview
+  const cameraZoom = 50;
+  camera.position.set(0, 8, cameraZoom);
+  camera.lookAt(0, 0, 0);
+
+  // Generate vector points in clustered galactic formation
+  function generateVectorPoints() {
+    const points = [];
+    
+    // First galaxy layer - main structure
+    const clusterCount = 16;
+    const pointsPerCluster = 85;
+    
+    for (let cluster = 0; cluster < clusterCount; cluster++) {
+      // Create galactic spiral arms
+      const armAngle = (cluster / clusterCount) * Math.PI * 2;
+      const armRadius = 8 + cluster * 2;
+      
+      for (let i = 0; i < pointsPerCluster; i++) {
+        // Spiral galaxy distribution
+        const spiralProgress = i / pointsPerCluster;
+        const spiralAngle = armAngle + spiralProgress * Math.PI * 3;
+        const spiralRadius = armRadius * (0.3 + spiralProgress * 0.7);
+        
+        // Add some randomness for natural clustering
+        const randomRadius = spiralRadius + (Math.random() - 0.5) * 3;
+        const randomAngle = spiralAngle + (Math.random() - 0.5) * 0.8;
+        const heightVariation = (Math.random() - 0.5) * 8;
+        
+        const x = Math.cos(randomAngle) * randomRadius;
+        const z = Math.sin(randomAngle) * randomRadius;
+        const y = heightVariation + Math.sin(spiralProgress * Math.PI * 2) * 3;
+        
+        points.push({
+          position: [x, y, z],
+          dimension: Math.floor(Math.random() * 512) + 128,
+          similarity: Math.random(),
+          cluster: cluster,
+          brightness: 0.3 + Math.random() * 0.7
+        });
+      }
+    }
+    
+    // Second galaxy layer - diffuse halo above and below
+    const haloPointCount = 210;
+    for (let i = 0; i < haloPointCount; i++) {
+      // Create a more diffuse, spherical distribution
+      const radius = 12 + Math.random() * 16;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.random() * Math.PI;
+      
+      // Bias towards top and bottom to create halo effect
+      const heightBias = Math.random() < 0.5 ? -1 : 1;
+      const adjustedPhi = phi * 0.6 + (heightBias > 0 ? 0.2 : 0.8) * Math.PI;
+      
+      const x = Math.sin(adjustedPhi) * Math.cos(theta) * radius;
+      const y = Math.cos(adjustedPhi) * radius * 1.5; // Stretch vertically
+      const z = Math.sin(adjustedPhi) * Math.sin(theta) * radius;
+      
+      points.push({
+        position: [x, y, z],
+        dimension: Math.floor(Math.random() * 256) + 64,
+        similarity: Math.random() * 0.6,
+        cluster: -2, // Halo cluster
+        brightness: 0.2 + Math.random() * 0.4
+      });
+    }
+    
+    // Add three asymmetrical satellite clusters
+    const satelliteClusters = [
+      { center: [25, 12, -8], size: 4, pointCount: 85 },
+      { center: [-18, -15, 20], size: 3.5, pointCount: 55 },
+      { center: [12, -20, -15], size: 5, pointCount: 70 }
+    ];
+    
+    satelliteClusters.forEach((satellite, satelliteIndex) => {
+      for (let i = 0; i < satellite.pointCount; i++) {
+        // Create asymmetrical, organic cluster shape
+        const localRadius = Math.random() * satellite.size;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.random() * Math.PI;
+        
+        // Add asymmetry by skewing the distribution
+        const skewX = 1 + Math.sin(satelliteIndex) * 0.4;
+        const skewY = 1 + Math.cos(satelliteIndex * 1.5) * 0.3;
+        const skewZ = 1 + Math.sin(satelliteIndex * 2) * 0.5;
+        
+        const localX = Math.sin(phi) * Math.cos(theta) * localRadius * skewX;
+        const localY = Math.cos(phi) * localRadius * skewY;
+        const localZ = Math.sin(phi) * Math.sin(theta) * localRadius * skewZ;
+        
+        points.push({
+          position: [
+            satellite.center[0] + localX,
+            satellite.center[1] + localY,
+            satellite.center[2] + localZ
+          ],
+          dimension: Math.floor(Math.random() * 384) + 256,
+          similarity: 0.4 + Math.random() * 0.4,
+          cluster: 100 + satelliteIndex,
+          brightness: 0.3 + Math.random() * 0.5
+        });
+      }
+    });
+    
+    // Add some "outlier" points - rare embeddings in distant space
+    for (let i = 0; i < 40; i++) {
+      const distance = 18 + Math.random() * 8;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.random() * Math.PI;
+      
+      points.push({
+        position: [
+          Math.sin(phi) * Math.cos(theta) * distance,
+          Math.cos(phi) * distance,
+          Math.sin(phi) * Math.sin(theta) * distance
+        ],
+        dimension: Math.floor(Math.random() * 1024) + 512,
+        similarity: Math.random() * 0.3,
+        cluster: -1,
+        brightness: 0.1 + Math.random() * 0.4
+      });
+    }
+    
+    return points;
+  }
+
+  // Create visual representation of vector points
+  function createVectorPointMeshes(points) {
+    const meshes = [];
+    
+    points.forEach((point, index) => {
+      // Create different sized points based on "importance" (dimension)
+      const size = 0.08 + (point.dimension / 1024) * 0.15;
+      const geometry = new THREE.SphereGeometry(size, 12, 8); // Increased detail
+      
+      // All dots use brand dark color
+      const material = new THREE.MeshBasicMaterial({
+        color: 0x262620,
+        transparent: true,
+        opacity: 0.7 + point.brightness * 0.3
+      });
+      
+      const mesh = new THREE.Mesh(geometry, material);
+      mesh.position.set(...point.position);
+      
+      meshes.push(mesh);
+      scene.add(mesh);
+    });
+    
+    return meshes;
+  }
+
+  // Create the vector galaxy
+  const vectorPoints = generateVectorPoints();
+  const pointMeshes = createVectorPointMeshes(vectorPoints);
+
+  let time = 0;
+
+  function animate() {
+    time += 0.005;
+
+    // Spherical camera movement around the point cloud (all axes)
+    const radius = cameraZoom;
+    const orbitSpeed = 0.2;
+    const verticalSpeed = 0.15;
+    const rollSpeed = 0.1;
+    
+    // Spherical coordinates for full 3D rotation
+    const theta = time * orbitSpeed; // Horizontal rotation
+    const phi = Math.sin(time * verticalSpeed) * Math.PI * 0.3 + Math.PI * 0.5; // Vertical oscillation
+    
+    camera.position.x = Math.sin(phi) * Math.cos(theta) * radius;
+    camera.position.y = Math.cos(phi) * radius;
+    camera.position.z = Math.sin(phi) * Math.sin(theta) * radius;
+    
+    // Always look at the center but add slight roll
+    const up = new THREE.Vector3(
+      Math.sin(time * rollSpeed),
+      Math.cos(time * rollSpeed * 0.7),
+      Math.sin(time * rollSpeed * 0.3)
+    ).normalize();
+    
+    camera.lookAt(0, 0, 0);
+    camera.up.copy(up);
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+
+  console.log("Starting vector galaxy animation...");
+  animate();
+
+  // Handle resize
+  function onWindowResize() {
+    const newWidth = container.clientWidth;
+    const newHeight = 600;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    
+    camera.aspect = newWidth / newHeight;
+    camera.updateProjectionMatrix();
+    renderer.setPixelRatio(dpr);
+    renderer.setSize(newWidth, newHeight);
+  }
+
+  window.addEventListener('resize', onWindowResize);
+
+  // Cleanup on page unload
+  window.addEventListener('beforeunload', () => {
+    window.removeEventListener('resize', onWindowResize);
+  });
+}
+</script>
+```
