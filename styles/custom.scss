@@ -66,46 +66,71 @@ pre > code.sourceCode > span {
   color: $white;
 }
 
+// --- General code span (default) ---
 code span {
-  color: #e4c1f9;
+  color: #e4c1f9; // Default code color
 }
 
-code span.im {
-  color: #a9def9;
-}
-
+// --- Syntax highlighting: Keywords, Control Flow, Operators ---
 code span.kw {
-  color: #d0f4de;
+  color: #d0f4de; // Keywords (e.g., def, class, return)
 }
-
 code span.cf {
-  color: #fcf6bd;
+  color: #fcf6bd; // Control flow (e.g., if, else, for, while)
 }
-
-code span.va {
-  color: #ff99c8;
-}
-
-code span.st {
-  color: #f2b5d4;
-}
-
-code span.fl {
-  color: #f7d6e0;
-}
-
-code span.dv {
-  color: plum;
-}
-
 code span.op {
-  color: #b2f7ef;
+  color: #b2f7ef; // Operators (e.g., +, -, *, /, =)
 }
 
+// --- Syntax highlighting: Identifiers, Variables, Functions ---
+code span.va {
+  color: #ff99c8; // Variables
+}
+code span.fu {
+  color: #bdb2ff; // Function names
+}
+code span.im {
+  color: #a9def9; // Imports (e.g., import, from)
+}
+
+// --- Syntax highlighting: Literals ---
+code span.st {
+  color: #f2b5d4; // Strings
+}
+code span.fl {
+  color: #f7d6e0; // Floating point numbers
+}
+code span.dv {
+  color: plum; // Decimal/Integer values
+}
+
+// --- Syntax highlighting: Special/Other ---
 code span.sc {
-  color: #7bdff2;
+  color: #7bdff2; // Special characters (e.g., punctuation, brackets)
+}
+code span.co {
+  color: rgb(179, 239, 158); // Comments
 }
 
-code span.co {
-  color: lightgrey;
+// --- Python-specific and extended highlighting ---
+code span.bu {
+  color: #ffd6a5; // Builtins (e.g., print, len, list)
+}
+code span.ex {
+  color: #ffb4a2; // Exceptions (e.g., ValueError, Exception)
+}
+code span.an {
+  color: #b5ead7; // Annotations (e.g., type hints)
+}
+code span.pp {
+  color: #caffbf; // Preprocessor directives (rare in Python)
+}
+code span.ot {
+  color: #fdffb6; // Other (e.g., decorators, miscellaneous)
+}
+code span.er {
+  color: #ff595e; // Errors
+}
+code span.ss {
+  color: #00bbf9; // Substitutions (e.g., f-string expressions)
 }
