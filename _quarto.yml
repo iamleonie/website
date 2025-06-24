@@ -30,12 +30,18 @@ website:
       href: https://www.linkedin.com/in/804250ab/
     - icon: rss
       href: index.xml
+  open-graph: true
+  twitter-card:
+    site: "@helloiamleonie"
 format:
   html:
     theme:
       - default
       - styles/custom.scss
     css: styles/styles.css
+    toc: true
+    toc-expand: true
+    toc-depth: 3
 
 
 

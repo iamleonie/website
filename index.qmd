@@ -276,3 +276,6 @@ if (!container || typeof THREE === 'undefined') {
 }
 </script>
 ```
+<div style="text-align: center; margin-top: 0.5em; color: #444; font-size: 1.05em;">
+  <strong>Fig. 1:</strong> Embeddings in latent space
+</div>

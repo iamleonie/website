@@ -1,0 +1,135 @@
+---
+title: Who wrote this?
+subtitle: "And why?" 
+description: "I reflect on my 3rd blogging anniversary and realize that LLMs made me remember why I started writing in the first place"
+date: 2025-06-24
+toc: true
+---
+
+A few weeks ago, I was learning about “KV caching”. 
+I learn best by writing a blog post as if I were teaching my past self. 
+While I was using Claude to help me learn and write a blog on this topic, I had a thought: 
+Why wasn’t I just churning out the blog after I had grasped the concept of “KV caching”? 
+After all, it could become a nice piece of content to drive a steady stream of traffic to my recently launched website. 
+
+Admittedly, I haven't been using AI in my writing as much as I have felt the pressure of figuring out how to use it to my advantage.  
+I’ve had a couple of uncomfortable encounters where I was confronted with why I wasn’t using AI more in my writing to increase outputs or lower my prices for my freelance writing services. 
+After all, isn’t the saying “AI isn’t going to replace you, it’s someone who knows how to use AI effectively”?
+
+AI has been slowly but surely trickling into our everyday lives: 
+I have more than one AI assistant on my phone, I use Cursor for my work, and Gemini now takes our meeting notes. 
+All of these feel like a boost in productivity. 
+But something in me keeps resisting using AI for my personal writing. 
+It feels “icky”, like some sort of cheating. 
+So, *why does some use of AI for writing, like meeting notes, feel like a productivity boost, while others, like blog posts, feel wrong*?
+
+There are different levels of autonomy between fully AI-generated and fully human-generated.
+They remind me of the levels of autonomous driving from when I was working in the automotive industry. 
+This is just a rough mental model of levels I made up, but I think they could look something like this:
+
+| Level | Description | Research | Outline | Writing | Editing |
+| -- | -- | -- | -- | -- | -- |
+| 0 | Fully human-generated | Human | Human | Human | Human |
+| 1 |  AI-assisted | Human | Human | Human | LLM |
+| 2  | AI-written | Human | Human | LLM | Human |
+| 3 | Human-in-the-loop | Human + LLM| Human + LLM | Human + LLM | n/a |
+| 4 | Human-reviewed | LLM | LLM | LLM | Human |
+| 5 | Fully autonomous | LLM | LLM | LLM | n/a |
+
+Between these levels, my feeling can quickly degrade from a productivity boost to not feeling great about it:
+
+- **Level 0 (Fully human-generated):** Everything is done by the human from research to final edits. 100% human-generated.
+    
+    *For me, this feels like honest work, even if it results in bad writing. 
+    Admittedly, I haven't done this much recently because I feel like using some sort of AI helps me improve the quality of my writing (see next level).*
+- **Level 1 (AI-assisted):** The human does everything from research to writing and uses AI for final edits. 
+These types of AI-assisted edits can be anything from using Grammarly for fixing typos, using ChatGPT or Claude to find better phrasing for single sentences that feel wonky, to using ChatGPT or Claude to review the entire piece and give you feedback on it.
+
+    *For me, this feels like a productivity boost and an improvement in the quality of my writing. I do this most of the time.*
+- **Level 2 (AI-written):** The human provides explicit instructions in the form of an outline broken down into bullet points, and the LLM does the actual writing. 
+You can think of this as a translation from bullet point format to coherent text format. 
+After the "translation", the human edits the final draft to avoid generating slop. 
+    
+    *I think many people do this by feeding an LLM their ideas as a written or dictated draft or even a speech note.
+    For me, even if I'm planning on doing heavy editing, this feels weird to me:*
+
+    *I have been experimenting with this a lot, but I haven’t found a way to make it work. 
+    Writing is thinking. 
+    And ehen you’re feeding your thoughts to an LLM in the form of an outline and bullet points, I think it still counts as thinking. 
+    They are your thoughts, and AI only converted bullet points into coherent text. 
+    So this should feel okay, but admittedly, I haven’t done this much so far.*
+
+    *I do this sparingly, e.g., for introductions, or single paragraphs when I lose motivation, or in Jupyter Notebooks between code cells.
+    But if I do, I’m paranoid that my readers will detect it, think I'm lazy, and that it will hurt my reputation. 
+    I think we can tell when AI was heavily involved. 
+    It’s not only em dashes and the overuse of the word “delve” that gives AI away.
+    I was once a reviewer for a piece of writing where I felt I was reading AI-generated text. 
+    And sure enough, that project was later canceled due to "not meeting the publisher's quality bar".*
+
+- **Level 3 (Human-in-the-loop):** The human and the LLM collaborate throughout the entire writing process. 
+You can think of them as being co-authors, bouncing ideas off each other: 
+    
+    - In the research phase, this could look like the human asking the LLM to consider certain aspects or using the AI for deep research.
+    - In the outlining phase, this could look like the human doing the first draft and having the LLM review for gaps in thinking or help the author think of ways to make a stronger argument.
+    - In the writing phase, the human could prompt the LLM to generate some text from different levels of granularity and then rephrase sentences, move parts around, and give it back to the LLM for review, and so on.
+    - Because the writing phase is a tight collaboration, the lines can be blurry between the writing and the editing phase.
+
+    Note that this doesn't mean they collaborate at each step. 
+    There can be many variations of this, where, for example, the human does the outlining alone.
+
+    *For me, this feels like a strong improvement in quality, but not necessarily like a productivity boost. 
+    This collaborative use of AI does not necessarily speed up the writing process for me. 
+    But this (or at least different variations of this) is how I do a lot of my writing.*
+
+- **Level 4 (Human-reviewed):** The human prompts the LLM with instructions on the topic with explicit style guidelines to research, outline, and generate the text on the topic. 
+The human edits the generated text by changing phrasing, moving sections around, and fact-checking to avoid generating slop. 
+
+    *For me, this is where I no longer feel comfortable because only the topic is my idea and the rest is handled by the AI.*
+
+- **Level 5 (Fully autonomous a.k.a. "vibe writing"):** The writing is fully AI-generated.
+This is similar to using a ghostwriter, and it comes with the same pros and cons. 
+If you don't have the time to sit down and write yourself, prompting a ghostwriter with a few thoughts and style guidelines can take some work off your plate.
+Just like with human ghostwriters, AI ghostwriters will improve over a few iterations on getting closer to your tone. 
+But you will have to live with the fact that you didn't write it. 
+
+    *For some people (e.g., that simply don't have the time) that's an amazing technological advance. 
+    For me, this gives me a weird feeling like I'm "cheating" - at least for my personal writing. 
+    For meeting notes or anything that hasn't my name attached to it, I think I can live with it.*
+
+So, if my main problem is using AI as a writing assistant, why is it that my blog on KV caching is still sitting in my drafts at this moment? 
+Instead of churning it out and starting to drive traffic to my newly launched website, I decided to write this one instead.
+When I started publishing my writing three years ago (unironically, this week is my three-year blogging anniversary), I did this to share my learning notes with the community. 
+When I quit my job in 2023 to become a full-time blogger, this changed. 
+I started to care more about metrics like traffic to monetize my blog.
+Now that I could “abuse” AI to cheat this metric, I realized that I had forgotten why I had started writing in the first place. 
+For me, writing isn’t only thinking, but it’s learning.
+And I haven't fully understood the concept of KV caching yet.
+
+I'm publishing the first piece of writing on my newly launched website today on my three year blogging anniversary.
+I think it’s telling that it is not a tutorial or an explanation piece, but a piece of writing on what I think. 
+Going forward I plan to write more personalized pieces and I hope you’ll stay along for the next chapter of my writing journey. 
+
+I’m curious if you can tell how much (or how embarrasingly little) an LLM was involved in writing this piece.
+<!--
+---
+
+## Appendix
+
+If you're curious how I have been using AI in my writing so far or how I intend to use AI in my writing going forward, here it is based on the type of writing that I'm doing:
+
+- Personal writing/Thought leadership/Original thinking /Op-ed: Collab, Human, human, LLM
+- **Explanations of technical concepts:** SEO pieces collab, human, LLM, human
+- **Jupyter Notebooks and code tutorials:** human, human, llm, human
+    Or if I write a notebook-style tutorial and first did all the coding and need to add some text explaining the reasoning behind the following pieces of code.* 
+
+And this is how I (embarassingly manually) wrote this post:
+
+1. Dictate a first braindump into my Notes apps during a walk
+2. Feed into Claude to help me figure out what it is I'm trying to say
+3. Write a 500 - 800 word draft manually
+4. Repeat steps 2 and 3 about two to three times until I have a better idea of what it is I'm trying to say
+5. Write a completely new "first" draft manually
+6. Let it sit for two days
+7. Read and edit it manually
+8. ...
+-->

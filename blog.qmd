@@ -2,7 +2,7 @@
 title: "Blog"
 listing:
   contents:
-  #- posts
+  - blog
   - archived-items.yaml
   #max-items: 5
   sort: "date desc"
@@ -19,7 +19,3 @@ format:
     html-math-method: mathml
 #title-block-banner: true
 ---
-
-This page is currently under construction. 
-
-You can read all my previous [Medium](https://medium.com/@iamleonie) articles (without the paywall) here:
