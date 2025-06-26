@@ -12,7 +12,7 @@ While I was using Claude to help me learn and write a blog on this topic, I had 
 Why wasn’t I just churning out the blog after I had grasped the concept of “KV caching”? 
 After all, it could become a nice piece of content to drive a steady stream of traffic to my recently launched website. 
 
-Admittedly, I haven't been using AI in my writing as much as I have felt the pressure of figuring out how to use it to my advantage.  
+Admittedly, I haven't been using AI in my writing as much as I have felt the pressure of figuring out how to use it to my advantage. 
 I’ve had a couple of uncomfortable encounters where I was confronted with why I wasn’t using AI more in my writing to increase outputs or lower my prices for my freelance writing services. 
 After all, isn’t the saying “AI isn’t going to replace you, it’s someone who knows how to use AI effectively”?
 
