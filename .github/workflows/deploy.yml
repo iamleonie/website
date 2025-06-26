@@ -22,10 +22,11 @@ jobs:
       run: quarto render
 
     - name: Deploy to server via SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        local_path: './_site/*'
-        remote_path: ${{ secrets.SSH_TARGET_DIR }}
+        server-dir: ${{ secrets.SSH_TARGET_DIR }}
+        local-dir: ./_site/
+        protocol: sftp
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
