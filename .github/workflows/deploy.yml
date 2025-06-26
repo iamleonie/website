@@ -22,11 +22,12 @@ jobs:
       run: quarto render
 
     - name: Deploy to server via SFTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: pressidium/lftp-mirror-action@v1
       with:
-        server: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        server-dir: ${{ secrets.SSH_TARGET_DIR }}
-        local-dir: ./_site/
-        protocol: sftp
-        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        host: ${{ secrets.SSH_HOST }}
+        user: ${{ secrets.SSH_USERNAME }}
+        private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        onlyNewer: true
+        localDir: './_site'
+        remoteDir: ${{ secrets.SSH_TARGET_DIR }}
+        options: '--verbose'
