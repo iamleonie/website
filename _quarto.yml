@@ -35,6 +35,9 @@ website:
     site: "@helloiamleonie"
 format:
   html:
+    include-in-header: 
+      text: | 
+        <meta name="google-site-verification" content="WrLJ585fAuA85_gliEF5FdqaDHKDyeKf5PMt5dlKOKw" />
     theme:
       - default
       - styles/custom.scss
