@@ -29,7 +29,7 @@ website:
     - icon: linkedin
       href: https://www.linkedin.com/in/804250ab/
     - icon: rss
-      href: index.xml
+      href: blog.xml
   open-graph: true
   twitter-card:
     site: "@helloiamleonie"
