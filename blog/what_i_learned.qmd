@@ -1,0 +1,95 @@
+---
+title: 37 Things I Learned About Information Retrieval in Two Years at a Vector Database Company
+subtitle: "Reflections on what I've learned about information retrieval in the last two years working at Weaviate " 
+description: "From BM25 to RAG: Everything I learned about vector databases, embedding models, and vector search - and everything in between."
+date: 2025-07-03
+toc: true
+---
+Today I'm celebrating my two-year work anniversary at [Weaviate](https://weaviate.io), a vector database company. 
+To celebrate, I want to reflect on what I've learned about vector databases and search during this time. 
+Here are some of the things I've learned and some common misconceptions I see:
+
+1. **BM25 is a strong baseline for search.** Ha! You thought I would start with something about vector search, and here I am talking about keyword search. And that is exactly the first lesson: Start with something simple like BM25 before you move on to more complex things like vector search. 
+
+2. **Vector search in vector databases is *approximate* and *not exact*.** In theory, you could run a brute-force search to compute distances between a query vector and every vector in the database using exact k-nearest neighbors (KNN). But this doesn’t scale well. That’s why vector databases use Approximate Nearest Neighbor (ANN) algorithms, like HNSW, IVF, or ScaNN, to speed up search while trading off a small amount of accuracy. Vector indexing is what makes vector databases so fast at scale.
+
+3. **Vector databases don't only store embeddings.** They also store the original object (e.g., the text from which you generated the vector embeddings) and metadata. This allows them to support other features beyond vector search, like metadata filtering and keyword and hybrid search.
+
+4. **Vector databases' main application is not in generative AI.** It's in search. But finding relevant context for LLMs is 'search'. That's why vector databases and LLMs go together like cookies and cream.
+
+5. **You have to specify how many results you want to retrieve.** When I think back, I almost have to laugh because this was such a big "aha" moment when I realized that you need to define the maximum number of results you want to retrieve. It's a little oversimplified, but vector search would return all the objects, stored in the database sorted by the distance to your query vector, if there weren't a `limit` or `top_k` parameter. 
+
+6. **There are many different types of embeddings.** When you think of a vector embedding, you probably visualize something like [-0.9837, 0.1044, 0.0090, ..., -0.2049]. That's called a dense vector, and it is the most commonly used type of vector embedding. But there's also many other types of vectors, such as sparse ([0, 2, 0, ..., 1]), binary ([0, 1, 1, ..., 0]), and multi-vector embeddings ([[-0.9837, ..., -0.2049], [ 0.1044, ..., 0.0090], ..., [-0.0937, ..., 0.5044]]), which can be used for different purposes.
+
+7. **Fantastic embedding models and where to find them.** The first place to go is the [Massive Text Embedding Benchmark (MTEB)](https://huggingface.co/spaces/mteb/leaderboard). It covers a wide range of different tasks for embedding models, including classification, clustering, and retrieval.
+If you're focused on information retrieval, you might want to check out [BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models](https://github.com/beir-cellar/beir).
+
+8. **The majority of embedding models on MTEB are English.** If you're working with multilingual or non-English languages, it might be worth checking out [MMTEB (Massive Multilingual Text Embedding Benchmark)](https://arxiv.org/html/2502.13595v1).
+
+9. **A little history on vector embeddings:** Before there were today's contextual embeddings (e.g., BERT), there were static embeddings (e.g., Word2Vec, GloVe). They are static because each word has a fixed representation, while contextual embeddings generate different representations for the same word based on the surrounding context. Although today's contextual embeddings are much more expressive, static embeddings can be helpful in computationally restrained environments because they can be looked up from pre-computed tables. 
+
+10. **Don't confuse sparse vectors and sparse embeddings.** It took me a while until I understood that sparse vectors can be generated in different ways: Either by applying statistical scoring functions like TF-IDF or BM25 to term frequencies (often retrieved via inverted indexes), or with neural sparse embedding models like SPLADE. That means a sparse embedding is a sparse vector, but not all sparse vectors are necessarily sparse embeddings.
+
+11. **Embed all the things.** Embeddings aren't just for text. You can embed images, PDFs as images (see [ColPali](https://arxiv.org/abs/2407.01449)), graphs, etc. And that means you can do vector search over multimodal data. It's pretty incredible. You should try it sometime.
+
+12. **The economics of vector embeddings.** This shouldn't be a surprise, but the vector dimensions will impact the required storage cost. So, consider whether it is worth it before you choose an embedding model with 1536 dimensions over one with 768 dimensions and risk doubling your storage requirements. Yes, more dimensions capture more semantic nuances. But you probably don't need 1536 dimensions to "chat with your docs". Some models actually use [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147) to allow you to shorten vector embeddings for environments with less computational resources, with minimal performance losses. 
+
+13. Speaking of: **"Chat with your docs" tutorials are the "Hello world" programs of Generative AI.** \<EOS>
+
+14. **You need to call the embedding model A LOT.** Just because you embedded your documents during the ingestion stage, doesn't mean you're done calling the embedding model. Every time you run a search query, the query must also be embedded (if you're not using a cache). If you're adding objects later on, those must also be embedded (and indexed). If you're changing the embedding model, you must also re-embed (and re-index) everything.
+
+15. **Similar does not necessarily mean relevant.** Vector search returns objects by their similarity to a query vector. The similarity is measured by their proximity in vector space. Just because two sentences are similar in vector space (e.g., "How to fix a faucet" and "Where to buy a kitchen faucet") does not mean they are relevant to each other.
+
+16. **Cosine similarity and cosine distance are not the same thing.** But they are related to each other ($\text{cosine distance} = 1- \text{cosine similarity}$). If you will, distance and similarity are inverses: If two vectors are exactly the same, the similarity is 1 and the distance between them is 0.
+
+17. **If you're working with normalized vectors, it doesn't matter whether you're using cosine similarity or dot product for the similarity measure.** Because mathematically, they are the same. For the calculation, dot product is more efficient.
+
+18. **Common misconception: The R in RAG stands for 'vector search'.** It doesn't. It stands for 'retrieval'. And retrieval can be done in many different ways (see following bullets).
+
+19. **Vector search is just one tool in the retrieval toolbox.** There's also keyword-based search, filtering, and reranking. It's not one over the other. To build something great, you will need to combine it with different tools.
+
+20. **When to use keyword-based search vs. vector-based search:** Does your use case require mainly matching semantics and synonyms (e.g., "pastel colors" vs. "light pink") or exact keywords (e.g., "A-line skirt", "peplum dress")? If it requires both (e.g., "pastel colored A-line skirt"),  you might benefit from combining both and using hybrid search. In some implementations (e.g., Weaviate), you can just use the hybrid search function and then use the `alpha` parameter to change the weighting from pure keyword-based search, a mix of both, to pure vector search.
+
+21. **Hybrid search can be a hybrid of different search techniques.** Most often, when you hear people talk about hybrid search, they mean the combination of keyword-based search and vector-based search. But the term 'hybrid' doesn't specify which techniques to combine. So, sometimes you might hear people talk about hybrid search, meaning the combination of vector-based search and search over structured data (often referred to as metadata filtering).
+
+22. **Misconception: Filtering makes vector search faster.** Intuitively, you'd think using a filter should speed up search latency because you're reducing the number of candidates to search through. But in practice, pre-filtering candidates can, for example, break the graph connectivity in HNSW, and post-filtering can leave you with no results at all. Vector databases have different, sophisticated techniques to handle this challenge.
+
+23. **Two-stage retrieval pipelines aren't only for recommendation systems.** Recommendation systems often have a first retrieval stage that uses a simpler retrieval process (e.g., vector search) to reduce the number of potential candidates, which is followed by a second retrieval stage with a more compute-intensive but more accurate reranking stage. You can apply this to your RAG pipeline as well.
+
+24. **How vector search differs from reranking.** Vector search returns a small portion of results from the entire database. Reranking takes in a list of items and returns the re-ordered list.
+
+25. **Finding the right chunk size to embed is not trivial.** Too small, and you'll lose important context. Too big, and you'll lose semantic meaning. Many embedding models use mean pooling to average all token embeddings into a single vector representation of a chunk. So, if you have an embedding model with a large context window, you can technically embed an entire document. I forgot who said this, but I  like this analogy: You can think of it like creating a movie poster for a movie by overlaying every single frame in the movie. All the information is there, but you won't understand what the movie is about.
+
+26. **Vector indexing libraries are different from vector databases.** Both are incredibly fast for vector search. Both work really well to showcase vector search in "chat with your docs"-style RAG tutorials. However, only one of them adds data management features, like built-in persistence, CRUD support, metadata filtering, and hybrid search.
+
+27. **RAG has been dying since the release of the first long-context LLM.** Every time an LLM with a longer context window is released, someone will claim that RAG is dead. It never is…
+
+28. **You can throw out 97% of the information and still retrieve (somewhat) accurately.** It's called vector quantization. For example, with binary quantization you can change something like  [-0.9837, 0.1044, 0.0090, ..., -0.2049] into [0, 1, 1, ..., 0] (a 32x storage reduction from 32-bit float to 1-bit) and you'll be surprised how well retrieval will remain to work (in some use cases). 
+
+29. **Vector search is *not* robust to typos.** For a while, I thought that vector search was robust to typos because these large corpora of text surely must contain a lot of typos and therefore help the embedding model learn these typos as well. But if you think about it, there's no way that all the possible typos of a word are reflected in sufficient amounts in the training data. So, while vector search can handle *some* typos, you can't really say it is robust to them.
+
+30. **Knowing when to use which metric to evaluate search results.** There are many different metrics to evaluate search results. Looking at academic benchmarks, like BEIR, you'll notice that NDCG@k is prominent. But simpler metrics like precision and recall are a great fit for many use cases.
+
+31. **The precision-recall trade-off** is often depicted with a fisherman's analogy of casting a net, but this e-commerce analogy made it click better for me: Imagine you have a webshop with 100 books, out of which 10 are ML-related. 
+
+    Now, if a user searches for ML-related books, you could just return one ML book. Amazing! You have **perfect precision** (out of the k=1 results returned, how many were relevant). But that's **bad recall** (out of the relevant results that exist, how many did I return? In this case, 1 out of 10 relevant books). And also, that's not so good for your business. Maybe the user didn't like that one ML-related book you returned.
+
+    On the other side of that extreme is if you return your entire selection of books. All 100 of them. Unsorted... That's **perfect recall** because you returned all relevant results. It's just that you also returned a bunch of irrelevant results, which can be measured by how **bad the precision** is.
+
+32. **There are metrics that include the order.** When I think of search results, I visualize something like a Google search. So, naturally, I thought that the rank of the search results is important. But metrics like precision and recall don't consider the order of search results. If the order of your search results is important for your use case, you need to choose rank-aware metrics like MRR@k, MAP@k, or NDCG@k.
+
+33. **Tokenizers matter.** If you've been in the Transformer's bubble too long, you've probably forgotten that other tokenizers exist next to Byte-Pair-Encoding (BPE). Tokenizers are also important for keyword search and its search performance. And if the tokenizer impacts the keyword-based search performance, it also impacts the hybrid search performance.
+
+34. **Out-of-domain is not the same as out-of-vocabulary.** Earlier embedding models used to fail on out-of-vocabulary terms. If your embedding model had never seen or heard of "Labubu", it would have just run into an error. With smart tokenization, unseen out-of-vocabulary terms can be handled graciously, but the issue is that they are still out-of-domain terms, and therefore, their vector embeddings look like a proper embedding, but they are meaningless.
+
+35. **Query optimizations:** You know how you've learned to type "longest river africa" into Google's search bar, instead of "What is the name of the longest river in Africa?". You've learned to optimize your search query for keyword search (yes, we know the Google search algorithm is more sophisticated. Can we just go with it for a second?). Similarly, we now need to learn how to optimize our search queries for vector search now. 
+
+36. **What comes after vector search?** First, there was keyword-based search. Then,  Machine Learning models enabled vector search. Now, LLMs with reasoning enable reasoning-based retrieval.
+
+37. **Information retrieval is so hot right now.** I feel fortunate to get to work in this exciting space. Although working on and with LLMs seems to be the cool thing now, figuring out how to provide the best information for them is equally exciting. And that's the field of retrieval.
+
+I'm repeating my last point, but looking back at the past two years, I feel grateful to work in this field. I have only scratched the surface so far, and there's still so much to learn. When I joined Weaviate, vector databases were the hot new thing. Then came RAG. Now, we're talking about "context engineering". *But what hasn't changed is the importance of finding the best information to give the LLM so it can provide the best possible answer.*
+
+---
+
+*This blog is inspired by [Doug Turnbull](https://twitter.com/softwaredoug)'s blog post [What AI Engineers Need to Know About Search](https://softwaredoug.com/blog/2024/06/25/what-ai-engineers-need-to-know-search). If you enjoyed this blog, you will probably enjoy Doug's blog as well.*
