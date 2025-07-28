@@ -1,0 +1,156 @@
+---
+title: First impressions from testing 4 Coding Agents with Jupyter Notebooks
+subtitle: "How well do Claude Code and Gemini CLI with and without Cursor and Gemini from within Google Colab handle Jupyter Notebook workflows for teaching and experimentation?" 
+description: "My experience with using different coding agents, such as Claude Code, Gemini CLI, Cursor, and Gemini within Google Colab, with Jupyter Notebooks."
+date: 2025-07-28
+toc: true
+---
+
+Say what you will about Jupyter Notebooks, but I think they are an incredible medium for learning and quick experimentation.
+I use Jupyter Notebooks all the time for my work and personal use.
+So, naturally, I was curious when I read that you could [use Claude Code with Jupyter Notebooks](https://www.anthropic.com/engineering/claude-code-best-practices). 
+
+In this article, I share my first impressions, tips, and frustrations from experimenting with the following four coding agents for Jupyter Notebooks: 
+
+- CLI Agents (Claude Code and Gemini CLI)
+- Cursor (using `claude-3.5-sonnet`) with and without CLI coding agents
+- Gemini within Google Colab
+
+*Note that these coding agents are improving so rapidly that the contents of this article might already be outdated by the time you read this.*
+
+## The challenges of working with Jupyter Notebooks
+
+Working with Jupyter Notebooks is different than working with "regular" code because it doesn't only serve a functional purpose but also has an interfacing component (text and visuals) to it. Thus, the user experience of different coding agents with Jupyter Notebooks will be different than when you work on "regular" coding projects. 
+
+This means a coding agent that works well with common programming tasks might not work well with Jupyter Notebooks and vice versa. This section discusses challenges specific to Jupyter Notebooks and how the four contenders handled them.
+
+### Set up and UX
+
+Whichever coding agent you're using, you'll always have the Jupyter Notebook and the chat interface open somehow:
+
+- In Google Colab, a nice little chat interface with Gemini is at the bottom of your window.
+- When using a CLI agent, [Anthropic recommends having Claude Code and the Notebook open side-by-side]((https://www.anthropic.com/engineering/claude-code-best-practices)) in your editor, such as VS Code or Cursor.
+
+::: {.callout-tip}
+## Editor Layout
+
+A great [tip from Radek Osmulski](https://x.com/radekosmulski/status/1927855504140775725) is to change the layout of your code editor. 
+
+Usually, the terminal is on the bottom by default. But for an optimized user experience, it's a great idea to move the terminal with the CLI agent to the side so that you have your Jupyter Notebook on one side and the terminal with your CLI coding agent open on the other.
+
+![Side-by-side setup with Jupyter Notebook and Claude Code in Cursor](images/claude_code_cursor_setup.png)
+:::
+
+One thing you have to be careful with if you and a CLI coding agent are collaborating on a Jupyter Notebook is that you need to be cautious that you're not overwriting each other's work. So, save every manual change in the Notebook before prompting the CLI agent to apply any additional changes. Also, after the CLI agent has made any changes, you often need to reload the Notebook to see the changes. 
+
+::: {.callout-tip}
+## VS Code Extension
+There's a [VS Code extension by Radek Osmulski](https://x.com/radekosmulski/status/1929018342586655015) that automatically reloads the Jupyter Notebooks for this purpose.
+:::
+
+### Cell operations
+
+The cells of a Jupyter Notebook make them different from regular code files. 
+While regular coding involves files containing code, Jupyter Notebooks consist of text and code cells. 
+These cells must be created, edited, moved around, and deleted. 
+
+However, because these terminal agents are intended for writing and editing code (and text), they have quite a few limitations when it comes to this characteristic of Jupyter Notebooks:
+
+- **Creating new cells:** Out of the coding agents, only Claude Code was able to not only create cells but also place them where I wanted them. While Gemini CLI wasn't able to generate cells at all (although I'm sure that will change soon), Gemini within Colab was able to create new cells but always appended them at the end of the Notebook. 
+- **Moving cells:** Going a step further, Claude Code was the only contender for testing the ability to move cells around. This only works by copying/pasting the contents to a new cell and then deleting the old cell.
+- **Convert between Code and Markdown cells:** None of the tested coding agents were able to convert between Code and Markdown cells.
+
+### Editing cell contents
+
+What I noticed to be difficult was telling the coding agent which cell you want to modify. 
+Here's what worked, what worked somewhat, and what didn't work:
+
+Let's start with **what worked**. Identifying the cell's contents by describing it works well, but it is not a nice user experience. Additionally, Claude Code and Gemini in Google Colab are able to identify cells by their number or ID. You can prompt them with something like this:
+
+```python
+"Edit the contents of the third cell."
+```
+::: {.callout-tip}
+## Cell Identifiers
+I like this [tip of adding identifying top-level headings to text cells and comments to code cells](https://x.com/rashmigb/status/1944694560677843382) to help the CLI agents identify the cell you're talking about.
+:::
+
+What **works somewhat**is that, alternatively, if you're using something like Cursor, you can select a cell and have an AI assistant edit its contents with Command + K. 
+However, I noticed that when prompting it to add text, it would always add a hash symbol before a text cell. 
+This is not ideal because that means you have to manually remove the hash symbol - otherwise, your text is rendered as a heading.
+
+![Text generation in Jupyter Notebook with Cursor and Claude 3.5 Sonnet](images/cursor_text_generation_jupyter_notebook.png)
+
+**What (obviously) didn't work** was saying something like "Edit the contents of the cell where my cursor is", but I think that would be a nice feature.
+
+### Text generation
+
+Although you'd assume coding agents are specialized in writing code, my first impression was that all I tried were good at generating text. 
+
+### Code execution & error handling
+
+Not all coding agents can run code cells with the code they've written and self-correct them. While CLI agents can perform things like Git commands and run Python scripts, they are unfortunately not able to execute code cells in Jupyter Notebooks.
+
+In contrast, Gemini in Google Colab is not only able to create new cells with code but also to run them. And on top of that, if the executed cell produces an error, Gemini revises that cell's code, which was a pleasant user experience.
+
+## Use Cases
+I use Jupyter Notebooks for different use cases, each with its own challenges. This section discusses my three most common use cases for coding agents in Jupyter Notebooks: helping with writing coding tutorials, exploring data, and cleaning up Notebooks.
+
+### Coding tutorials
+Coding tutorials or explanations of technical concepts with code require writing both code and text that fit and weave together. You can either write code and text in parallel or sequentially.
+
+Tasking a coding agent to write code and text **in parallel** worked quite well for me if each task is small enough (e.g., connecting to a database instance and checking the connection), with the following prompt template:
+
+```python
+"Do XYZ. Add explanations"
+```
+
+However, I often like to do it **sequentially**: First, I write the code to experiment and play around with it. By the time I have the code cells how I like them, writing the text explanations for each cell feels like a tedious task that I'd love to automate. 
+
+The following instruction worked well with Claude Code, which created a plan with one task for each code cell that needed text added, and then went ahead and added those text cells at the right place. Gemini in Colab, on the other hand, did something similar; however, it wasn't able to add the text cells in the correct positions, so it appended all of them at the end of the Notebook.
+
+```python
+"Add explanations above each code cell."
+```
+
+### Exploratory Data Analysis
+On the other hand, exploratory data analysis requires data processing and visualization and the extraction of insights from those visualizations.
+
+I used Gemini in Google Colab to do some classical exploratory data analysis. It worked surprisingly well. Even with slightly more complex tasks, which required aggregating and pivoting the Pandas DataFrame to visualize the data in a heatmap, Gemini was able to accomplish this task on the first shot by creating a plan and then working through the to-do list one by one.
+
+What surprised me the most was that Gemini also summarized the findings at the end of the analysis without explicit prompting.
+
+### Notebook clean up
+This is the part I was most excited about:
+
+> You can also ask Claude to clean up or make aesthetic improvements to your Jupyter Notebook before you show it to colleagues. Specifically, **telling it to make the Notebook or its data visualizations "aesthetically pleasing" tends to help remind it that it's optimizing for a human viewing experience**.
+
+So, I tried the following instruction:
+
+```python
+"Can you make this notebook aesthetically pleasing?"
+```
+
+Claude Code analyzed the current state of the Notebook, made a plan of suggested changes, like adding headers and text, and started executing the tasks. I liked that Claude Code goes in small snippets for you to review and reject if you don't like it.
+
+Since the definition of "aesthetically pleasing" depends on personal preferences and these coding agents are probably trained on a large corpus of Jupyter Notebooks using lots of Emojis, Claude Code added a lot of emojis (especially to the headings) to my Notebook. Luckily, if you're like me and prefer few or no emojis, you can specify your preferences in the Claude.md or Gemini.md files.
+
+Unfortunately, when I tried the same instruction with Gemini in Google Colab, it only responded with the following answer, followed by some tips on how to make your Notebook more aesthetically pleasing.
+
+> "I can't directly change the aesthetic of the Notebook for you, as that often involves personal preference and visual styling that's outside of my capabilities.
+>    
+> However, I can give you some tips and show you how to use Markdown and code comments effectively to make your Notebook more organized and visually appealing:"
+
+
+## Summary
+
+These are my first impressions of playing around with different AI-assisted coding for Jupyter Notebooks. I have yet to dive deeper into various aspects, such as providing the coding agents access to specific documentation or refining prompts. 
+So far, I've found Gemini from within the Google Colab environment to be the most user-friendly experience, but Claude Code, together with Cursor, also has some advantages depending on what you're doing.
+
+I'm excited to see how these tools evolve over time (I'm sure by the time you are reading this, they probably have already changed a lot of the behavior of these assistants).
+
+Here are a few things I haven't tried yet for working with coding agents on Jupyter Notebooks:
+
+- Try a [Jupyter MCP](https://x.com/DynamicWebPaige/status/1937876922681487408)
+- Try [GitHub Copilot in VSCode](https://x.com/tkeyo_/status/1944728071342318027)
+- [Connect Gemini CLI with your Google Colab terminal](https://x.com/DynamicWebPaige/status/1937876922681487408)
