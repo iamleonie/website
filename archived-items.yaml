@@ -196,11 +196,11 @@
   date: "2022-12-22"
   categories: [Archive, Towards Data Science]
 
-- title: "A Visual Guide to Learning Rate Schedulers in PyTorch"
-  subtitle: "LR decay and annealing strategies for Deep Learning in Python"
-  path: "https://medium.com/towards-data-science/a-visual-guide-to-learning-rate-schedulers-in-pytorch-24bbb262c863?sk=4288c6886caea771222af8ed65de7b73"
-  date: "2022-12-06"
-  categories: [Archive, Towards Data Science]
+#- title: "A Visual Guide to Learning Rate Schedulers in PyTorch"
+#  subtitle: "LR decay and annealing strategies for Deep Learning in Python"
+#  path: "https://medium.com/towards-data-science/a-visual-guide-to-learning-rate-schedulers-in-pytorch-24bbb262c863?sk=4288c6886caea771222af8ed65de7b73"
+#  date: "2022-12-06"
+#  categories: [Archive, Towards Data Science]
 
 - title: "Kaggle Days Paris 2022"
   subtitle: "Discussing Data Science with Kagglers while eating macarons"
