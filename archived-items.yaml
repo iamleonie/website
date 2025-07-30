@@ -88,11 +88,11 @@
   date: "2023-07-18"
   categories: [Archive, Towards Data Science]
 
-- title: "Explaining Vector Databases in 3 Levels of Difficulty"
-  subtitle: "From noob to expert: Demystifying vector databases across different backgrounds"
-  path: "https://medium.com/towards-data-science/explaining-vector-databases-in-3-levels-of-difficulty-fc392e48ab78?sk=6453eeaebddb3587ed1f78ecc0dc474a"
-  date: "2023-07-04"
-  categories: [Archive, Towards Data Science]
+#- title: "Explaining Vector Databases in 3 Levels of Difficulty"
+#  subtitle: "From noob to expert: Demystifying vector databases across different backgrounds"
+#  path: "https://medium.com/towards-data-science/explaining-vector-databases-in-3-levels-of-difficulty-fc392e48ab78?sk=6453eeaebddb3587ed1f78ecc0dc474a"
+#  date: "2023-07-04"
+#  categories: [Archive, Towards Data Science]
   
 - title: "Matplotlib Tips to Instantly Improve Your Data Visualizations — According to “Storytelling with Data”"
   subtitle: "Recreating lessons learned from Cole Nussbaumer Knaflic’s book in Python using Matplotlib"
