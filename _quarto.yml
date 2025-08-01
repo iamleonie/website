@@ -22,7 +22,7 @@ website:
       - "Copyright 2025, Leonie Monigatti" 
       - imprint.qmd
       - privacy.qmd
-      #- glossary.qmd
+      - glossary.qmd
     right: 
     - icon: twitter-x
       href: https://x.com/helloiamleonie

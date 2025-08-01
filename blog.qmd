@@ -12,7 +12,7 @@ listing:
   filter-ui: false
   feed: 
     items: 10
-  fields: [title, subtitle, date, ] # image
+  fields: [title, subtitle, date, ]
 page-layout: full
 format:
   html:

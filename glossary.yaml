@@ -1,0 +1,69 @@
+#- title: "Artificial Intelligence (AI)"
+#  categories: []
+#  description: "..."
+
+#- title: "Curse of dimensionality"
+#  categories: []
+#  description: "Which means that, the more features we accumulate, the more data we need in order to accurately statistically confidently say anything about them, which results in models that may not accurately represent our data. (copied verbatim)"
+
+#- title: "Embedding"
+#  categories: []
+#  description: "An embedding is a numerical representation of an object (words, texts, images, etc.) in the form of a vector. "
+
+#- title: "End-of-Sequence Token (EOS Token)"
+#  categories: []
+#  description: "A special token that signals the completion of text generation in language models."
+
+#- title: "Fine-tuning"
+#  categories: []
+#  description: "..."
+
+#- title: "Foundation model"
+#  categories: []
+#  description: "..."
+
+#- title: "Hybrid search"
+#  categories: []
+#  description: "..."
+
+#- title: "Keyword search"
+#  categories: []
+#  description: "..."
+
+#- title: "KL divergence"
+#  categories: []
+#  description: "..."
+
+#- title: "Large Language Model (LLM)"
+#  categories: []
+#  description: "..."
+
+#- title: "Latent space"
+#  categories: []
+#  description: "the relationships between words that are not explicitly stated but that we can tease out based on how we model the data (verbatim)"
+
+#- title: "Polysemy"
+#  categories: []
+#  description: "Same word, different meanings (river bank vs financial bank)"
+
+- title: "Retrieval-Augmented Generation (RAG)"
+  categories: []
+  description: "Retrieval-Augmented Generation is a technique to ground the answers of LLMs in "
+  path: "blog/retrieval-augmented-generation-langchain.md"
+
+#- title: "Stop words"
+#  categories: []
+#  description: "Stop words in NLP are common high-frequency words like 'is' or 'the' that don't necessarily add meaning to..."
+
+#- title: "Token"
+#  categories: []
+#  description: "Subwords"
+
+- title: "Vector database"
+  categories: []
+  description: "A vector database stores, indexes, and bla strcutured and unstructured data alongside their embeddings together with metadata. It allows for efficient vector search."
+  path: "blog/explaining-vector-databases.md"
+
+#- title: "Vector search"
+#  categories: []
+#  description: "..."

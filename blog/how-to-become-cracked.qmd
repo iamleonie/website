@@ -1,0 +1,82 @@
+---
+title: How to become cracked
+subtitle: "test test test" 
+description: "test test test"
+date: 2025-07-03
+toc: true
+---
+
+I'm on a mission to become cracked.
+
+I've never considered myself "cracked" or an "10x engineer".
+
+So, I'm on a mission to become as cracked as I can before turning 35.
+
+## Step 1. Master data structures and algorithms
+
+With AI becoming widely available, Leetcode seems to no longer be that important
+
+Leetcode has been a cruical step of an interview process at FAANG companies
+
+I've never had to prepare for a coding interview with Leetcode
+
+I also don't have a computer science degree and am a self-taught programmer
+
+So, I decided to practice Leetcode for XX months.
+
+At first it's quite overwhelming
+
+The amount of concepts you need to learn seems like an endless list. 
+
+But after a month of "grinding" easy Leetcode questions from the  (Grind 75 and Interview 150) lists, I got a better feeling of 
+
+Now i am not as intimidated by "medium" questions anymore
+
+## Step 2. Master PyTorch basics and program fundamentals from scratch
+I think everyone should have coded a transformer from scratch to understand what's going on.
+
+## Step 3: Master git
+I've been using git for ages but if it gets more complicated than `git status`, `git commit`, and `git push`, I'm out.
+
+```bash
+git gud at this
+```
+
+## Step 4: Set up a personal website
+it's not necessary but I learned so much from setting up my own website.
+
+- How to register a domain, how to obtain an SSL certificate,
+- How to obtain a web server and upload data to a web server
+- How to add a CI/CD github workflow to automatically update your website
+
+All this good stuff
+
+### Step 5: Read more papers and publish notes
+Just reading a paper or writing a social media post about it doesnt count. 
+You really need to read and annotate it and bring it into a format that you'd be ok with publishing it.
+
+### Step 5.5: nanoGPT, from scratch
+> deeply knowledgeable about modern ML (transformers, embeddings, retrieval)
+> mixture of experts and expert parallelism
+ 
+> Train large-scale models from scratch
+> Multi-node, multi-gpu training experience wiith debugging skills
+> Distributed training frameworks and cluster management
+
+> NCCL (e.g., symmetric memory)
+
+### Step 6: Understand GPU, CPU and cloud
+
+> GPU memory management and optimization
+> NDIVIDA GPU programming (Triton, CLUTLASS)
+> custom CUDA kernel development for training operation
+>FP 8 or FP4 training
+
+### Step 7: Containerization
+
+### Step 8: System design 
+Be able to do some napkin math
+
+### Step 9: Make an open source contribution
+> Contributed to widely-used ML libraries
+> DeepSpeed, TorchTitan, NeMO
