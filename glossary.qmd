@@ -2,7 +2,7 @@
 title: "Glossary"
 listing:
   contents: 
-  #- glossary
+  - glossary
   - glossary.yaml
   sort: "title asc"
   type: grid
