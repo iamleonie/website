@@ -80,6 +80,18 @@ pre > code.sourceCode > span {
 }
 
 // --- General code span (default) ---
+code {
+  color: $white;
+}
+
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+  background-color: $black;
+}
+
+p pre code:not(.sourceCode), li pre code:not(.sourceCode), pre code:not(.sourceCode) {
+  background-color: lightgrey;
+  }
+
 code span {
   color: #e4c1f9; // Default code color
 }
